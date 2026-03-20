@@ -1,0 +1,74 @@
+[
+  {
+    "cid": 0,
+    "name": "id",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 1
+  },
+  {
+    "cid": 1,
+    "name": "email",
+    "type": "VARCHAR(255)",
+    "notnull": 1,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 2,
+    "name": "password",
+    "type": "VARCHAR(255)",
+    "notnull": 1,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 3,
+    "name": "role",
+    "type": "VARCHAR(255)",
+    "notnull": 0,
+    "dflt_value": "'Employee'",
+    "pk": 0
+  },
+  {
+    "cid": 4,
+    "name": "isVerified",
+    "type": "TINYINT(1)",
+    "notnull": 0,
+    "dflt_value": "0",
+    "pk": 0
+  },
+  {
+    "cid": 5,
+    "name": "verificationCode",
+    "type": "VARCHAR(255)",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 6,
+    "name": "createdAt",
+    "type": "DATETIME",
+    "notnull": 1,
+    "dflt_value": "'Invalid date'",
+    "pk": 0
+  },
+  {
+    "cid": 7,
+    "name": "updatedAt",
+    "type": "DATETIME",
+    "notnull": 1,
+    "dflt_value": "'Invalid date'",
+    "pk": 0
+  },
+  {
+    "cid": 8,
+    "name": "resetCodeExpiry",
+    "type": "DATETIME",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  }
+]

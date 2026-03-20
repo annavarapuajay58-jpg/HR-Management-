@@ -1,0 +1,74 @@
+[
+  {
+    "cid": 0,
+    "name": "id",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 1
+  },
+  {
+    "cid": 1,
+    "name": "employeeId",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 2,
+    "name": "leaveType",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 3,
+    "name": "startDate",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 4,
+    "name": "endDate",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 5,
+    "name": "reason",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 6,
+    "name": "status",
+    "type": "TEXT",
+    "notnull": 0,
+    "dflt_value": "'Pending'",
+    "pk": 0
+  },
+  {
+    "cid": 7,
+    "name": "createdAt",
+    "type": "DATETIME",
+    "notnull": 0,
+    "dflt_value": "CURRENT_TIMESTAMP",
+    "pk": 0
+  },
+  {
+    "cid": 8,
+    "name": "updatedAt",
+    "type": "DATETIME",
+    "notnull": 0,
+    "dflt_value": "CURRENT_TIMESTAMP",
+    "pk": 0
+  }
+]

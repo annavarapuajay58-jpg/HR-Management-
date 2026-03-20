@@ -1,0 +1,74 @@
+[
+  {
+    "cid": 0,
+    "name": "id",
+    "type": "UUID",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 1
+  },
+  {
+    "cid": 1,
+    "name": "userId",
+    "type": "UUID",
+    "notnull": 1,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 2,
+    "name": "date",
+    "type": "DATE",
+    "notnull": 1,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 3,
+    "name": "checkIn",
+    "type": "DATETIME",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 4,
+    "name": "checkOut",
+    "type": "DATETIME",
+    "notnull": 0,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 5,
+    "name": "hoursWorked",
+    "type": "DECIMAL(5,2)",
+    "notnull": 0,
+    "dflt_value": "0",
+    "pk": 0
+  },
+  {
+    "cid": 6,
+    "name": "status",
+    "type": "VARCHAR(255)",
+    "notnull": 0,
+    "dflt_value": "'Present'",
+    "pk": 0
+  },
+  {
+    "cid": 7,
+    "name": "createdAt",
+    "type": "DATETIME",
+    "notnull": 1,
+    "dflt_value": null,
+    "pk": 0
+  },
+  {
+    "cid": 8,
+    "name": "updatedAt",
+    "type": "DATETIME",
+    "notnull": 1,
+    "dflt_value": null,
+    "pk": 0
+  }
+]

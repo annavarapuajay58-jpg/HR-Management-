@@ -1,0 +1,29 @@
+--- HR Restrictions Verification ---
+Creating temporary HR user for testing...
+Admin: admin_test@example.com
+HR 1: seelamsrilekha775@gmail.com
+HR 2: tmp_hr_test@example.com
+Employee: annavarapuajay58@gmail.com
+
+--- 2. Testing getAllLeaves filtering ---
+HR 1 fetching all leaves:
+   Returned 1 leaves. HR leaves count: 0
+Admin fetching all leaves:
+   Returned 1 leaves. HR leaves count: 0
+
+--- 3. Testing updateLeaveStatus restriction ---
+   Creating mock leave for HR 2...
+HR 1 trying to approve HR 2 leave:
+   Expected Restriction (403): HR employees cannot approve or reject leaves for other HR staff. This must be done by an Admin.
+Admin trying to approve HR 2 leave:
+   OK: {"message":"Leave request approved successfully","leave":{"id":4,"userId":"c4d30...
+
+--- 4. Testing createTask restriction ---
+HR 1 trying to assign task to HR 2:
+   Expected Restriction (403): Only Admins can assign tasks to employees with the HR role.
+HR 1 trying to assign task to themselves:
+   Expected Restriction (403): Only Admins can assign tasks to employees with the HR role.
+Admin assigning task to HR 1:
+   Expected Restriction (201): {"id":"ff676606-5ae0-4d29-b917-1eb646d04a7b","priority":"Medium","status":"Pending","project":"General","title":"Admin Given Task","due":"2026-12-31","userId":"94f4b63d-7fdc-4f3f-964c-7ead122cb55a","createdBy":"116fbf9c-6fa6-48b7-9e31-81aeba85b8bd","updatedAt":"2026-03-09T05:42:10.520Z","createdAt":"2026-03-09T05:42:10.520Z"}
+
+Cleaning up temporary test data...

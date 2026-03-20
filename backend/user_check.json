@@ -1,0 +1,29 @@
+{
+  "id": "682dd135-b72b-4238-87f6-dd716e5f741f",
+  "firstName": "seelamsrivani72",
+  "lastName": "User",
+  "email": "seelamsrivani72@gmail.com",
+  "employeeId": "EMP_SEELA902",
+  "password": "$2a$10$iQaRMItbJ2E.htcMg9meNO8V/j.XLEBL3UR5j8JnPwjdVYMMMQgGS",
+  "role": "Employee",
+  "isVerified": true,
+  "verificationCode": null,
+  "resetCodeExpiry": null,
+  "createdAt": "2026-03-06T05:32:51.024Z",
+  "updatedAt": "2026-03-08T16:09:54.694Z",
+  "Employee": {
+    "id": "44ccdbcc-57e7-4ecf-94fd-d9736c8a9aa3",
+    "userId": "682dd135-b72b-4238-87f6-dd716e5f741f",
+    "firstName": "seelamsrivani72",
+    "lastName": "User",
+    "phone": null,
+    "address": null,
+    "designation": null,
+    "department": null,
+    "salary": null,
+    "joiningDate": null,
+    "status": "Active",
+    "createdAt": "2026-03-08T16:09:54.706Z",
+    "updatedAt": "2026-03-08T16:09:54.706Z"
+  }
+}

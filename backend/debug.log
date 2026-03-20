@@ -1,0 +1,25 @@
+[2026-03-17T04:09:17.305Z] getMyInvitations called for user: {"id":"7b720eb6-857c-486d-b3ca-ef08a4269387","role":"Employee","iat":1773720552,"exp":1773806952}
+[2026-03-17T04:09:17.394Z] Found 2 invitations for user ID: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:09:17.395Z] Sample invitation employeeId: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:09:17.411Z] getMyInvitations called for user: {"id":"7b720eb6-857c-486d-b3ca-ef08a4269387","role":"Employee","iat":1773720552,"exp":1773806952}
+[2026-03-17T04:09:17.426Z] Found 2 invitations for user ID: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:09:17.427Z] Sample invitation employeeId: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:47.966Z] getMyInvitations called for user: {"id":"7b720eb6-857c-486d-b3ca-ef08a4269387","role":"Employee","iat":1773721544,"exp":1773807944}
+[2026-03-17T04:25:48.032Z] Found 3 invitations for user ID: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:48.036Z] Sample invitation employeeId: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:48.064Z] getMyInvitations called for user: {"id":"7b720eb6-857c-486d-b3ca-ef08a4269387","role":"Employee","iat":1773721544,"exp":1773807944}
+[2026-03-17T04:25:48.079Z] Found 3 invitations for user ID: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:48.080Z] Sample invitation employeeId: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:54.627Z] getMyInvitations called for user: {"id":"7b720eb6-857c-486d-b3ca-ef08a4269387","role":"Employee","iat":1773721544,"exp":1773807944}
+[2026-03-17T04:25:54.644Z] Found 3 invitations for user ID: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:54.646Z] Sample invitation employeeId: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:55.922Z] getMyInvitations called for user: {"id":"7b720eb6-857c-486d-b3ca-ef08a4269387","role":"Employee","iat":1773721544,"exp":1773807944}
+[2026-03-17T04:25:55.937Z] Found 3 invitations for user ID: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:25:55.939Z] Sample invitation employeeId: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:32:00.696Z] getMyInvitations called for user: {"id":"7b720eb6-857c-486d-b3ca-ef08a4269387","role":"Employee","iat":1773721544,"exp":1773807944}
+[2026-03-17T04:32:00.713Z] Found 3 invitations for user ID: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-17T04:32:00.714Z] Sample invitation employeeId: 7b720eb6-857c-486d-b3ca-ef08a4269387
+[2026-03-20T06:24:38.682Z] getMyInvitations called for user: {"id":"336f4920-7a74-42c3-afd8-c3fb91f19edf","role":"Employee","iat":1773987869,"exp":1774074269}
+[2026-03-20T06:24:38.687Z] Found 0 invitations for user ID: 336f4920-7a74-42c3-afd8-c3fb91f19edf
+[2026-03-20T06:24:38.695Z] getMyInvitations called for user: {"id":"336f4920-7a74-42c3-afd8-c3fb91f19edf","role":"Employee","iat":1773987869,"exp":1774074269}
+[2026-03-20T06:24:38.699Z] Found 0 invitations for user ID: 336f4920-7a74-42c3-afd8-c3fb91f19edf

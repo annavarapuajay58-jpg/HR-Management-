@@ -1,0 +1,207 @@
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary: #64748b;
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+.auth-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 260px;
+    background: #1e293b;
+    color: white;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+/* ==============================
+   Sidebar Nav Items - Hover & Active
+================================ */
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.925rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sidebar-nav-item:hover {
+    color: white;
+    background: rgba(99, 102, 241, 0.18);
+    transform: translateX(4px);
+}
+
+.sidebar-nav-item.active {
+    color: white;
+    background: rgba(99, 102, 241, 0.3);
+    font-weight: 600;
+    border-left: 3px solid var(--primary);
+    padding-left: calc(1rem - 3px);
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.2);
+}
+
+.sidebar-nav-item.active svg {
+    color: var(--primary);
+}
+
+.sidebar-nav-item svg {
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+/* Logout button in sidebar */
+.sidebar-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: transparent;
+    color: #94a3b8;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    font-size: 0.925rem;
+    border-radius: 0.6rem;
+    transition: all 0.2s ease;
+}
+
+.sidebar-logout-btn:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    transform: translateX(4px);
+}
+
+/* Card hover lift effect */
+.stat-card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.task-card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+

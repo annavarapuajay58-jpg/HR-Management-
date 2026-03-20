@@ -1,0 +1,97 @@
+{
+  "Users": [
+    {
+      "email": "annavarapuajay58@gmail.com",
+      "id": "8ed4672e-59eb-4cc8-9be0-1674c542fa34",
+      "role": "Employee",
+      "firstName": null,
+      "lastName": null,
+      "employeeId": null,
+      "isVerified": 1
+    },
+    {
+      "email": "testuser123@gmail.com",
+      "id": "38e40d7e-589c-4e31-b18c-e0f55bb48bbc",
+      "role": "Employee",
+      "firstName": null,
+      "lastName": null,
+      "employeeId": null,
+      "isVerified": 0
+    },
+    {
+      "email": "ajay.dev1772694889048@gmail.com",
+      "id": "e798be75-7f65-455d-b817-151bb16107c1",
+      "role": "Employee",
+      "firstName": null,
+      "lastName": null,
+      "employeeId": null,
+      "isVerified": 0
+    },
+    {
+      "email": "testdiag@example.com",
+      "id": "6c6356e8-a9cb-435a-a08d-89c425fd547e",
+      "role": "Employee",
+      "firstName": null,
+      "lastName": null,
+      "employeeId": null,
+      "isVerified": 0
+    },
+    {
+      "email": "seelamsrivani72@gmail.com",
+      "id": "682dd135-b72b-4238-87f6-dd716e5f741f",
+      "role": "Employee",
+      "firstName": null,
+      "lastName": null,
+      "employeeId": null,
+      "isVerified": 1
+    },
+    {
+      "email": "test_hash@example.com",
+      "id": "d8dcc51b-66fb-4467-8d5b-553cbf2ce04c",
+      "role": "Employee",
+      "firstName": null,
+      "lastName": null,
+      "employeeId": null,
+      "isVerified": 0
+    },
+    {
+      "email": "seelamsrilekha2003@gmail.com",
+      "id": "7b720eb6-857c-486d-b3ca-ef08a4269387",
+      "role": "Employee",
+      "firstName": "Srilekha",
+      "lastName": "Seelam",
+      "employeeId": "EMP000",
+      "isVerified": 1
+    },
+    {
+      "email": "lizoajay61@gmail.com",
+      "id": "9f214809-752f-4102-85bd-fbd5174bb4e7",
+      "role": "HR",
+      "firstName": null,
+      "lastName": null,
+      "employeeId": null,
+      "isVerified": 1
+    },
+    {
+      "email": "test_persist@example.com",
+      "id": "0e9c316c-a2df-4e38-90cd-0ce828383396",
+      "role": "Employee",
+      "firstName": "Test",
+      "lastName": "Persist",
+      "employeeId": "TESTPERSIST001",
+      "isVerified": 0
+    }
+  ],
+  "Employees": [
+    {
+      "userId": "7b720eb6-857c-486d-b3ca-ef08a4269387",
+      "firstName": "Srilekha",
+      "lastName": "Seelam"
+    },
+    {
+      "userId": "0e9c316c-a2df-4e38-90cd-0ce828383396",
+      "firstName": "Test",
+      "lastName": "Persist"
+    }
+  ]
+}
