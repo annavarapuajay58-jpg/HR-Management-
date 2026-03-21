@@ -23,3 +23,7 @@
 [2026-03-20T06:24:38.687Z] Found 0 invitations for user ID: 336f4920-7a74-42c3-afd8-c3fb91f19edf
 [2026-03-20T06:24:38.695Z] getMyInvitations called for user: {"id":"336f4920-7a74-42c3-afd8-c3fb91f19edf","role":"Employee","iat":1773987869,"exp":1774074269}
 [2026-03-20T06:24:38.699Z] Found 0 invitations for user ID: 336f4920-7a74-42c3-afd8-c3fb91f19edf
+[2026-03-20T09:40:01.951Z] getMyInvitations called for user: {"id":"336f4920-7a74-42c3-afd8-c3fb91f19edf","role":"Employee","iat":1773999551,"exp":1774085951}
+[2026-03-20T09:40:01.959Z] Found 0 invitations for user ID: 336f4920-7a74-42c3-afd8-c3fb91f19edf
+[2026-03-20T09:40:01.971Z] getMyInvitations called for user: {"id":"336f4920-7a74-42c3-afd8-c3fb91f19edf","role":"Employee","iat":1773999551,"exp":1774085951}
+[2026-03-20T09:40:01.976Z] Found 0 invitations for user ID: 336f4920-7a74-42c3-afd8-c3fb91f19edf
