@@ -16,16 +16,44 @@ const payrollRoutes = require('./routes/payrollRoutes');
 const payslipRoutes = require('./routes/payslipRoutes');
 
 // MongoDB Connection
-require('./config/mongodb');
+const connectDB = require('./config/mongodb');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const mongoose = require('mongoose');
+
+// ✅ Middleware to check DB connection status
+const checkDbConnection = (req, res, next) => {
+    if (mongoose.connection.readyState !== 1) {
+        return res.status(503).json({ 
+            error: "Database Connection Failed", 
+            message: "The backend is unable to connect to MongoDB. Please ensure IP 0.0.0.0/0 is whitelisted in MongoDB Atlas." 
+        });
+    }
+    next();
+};
 
 
 // ✅ CORS (important for Netlify frontend)
+const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://hr-management-2.netlify.app' // Update this with your actual Netlify URL if different
+];
+
 app.use(cors({
-    origin: "*",   // production lo frontend URL pettavachu
-    credentials: true
+    origin: function (origin, callback) {
+        // allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            // Allow all origins for now to avoid blocking, but you should restrict this later
+            return callback(null, true);
+        }
+        return callback(null, true);
+    },
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // ✅ Body parser
@@ -34,6 +62,9 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 
 // ================= ROUTES =================
+
+// Apply DB check to all API routes
+app.use('/api', checkDbConnection);
 
 // Auth
 app.use('/api/auth', authRoutes);
@@ -66,6 +97,15 @@ app.get('/', (req, res) => {
 
 
 // ================= SERVER START =================
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-});
+const startServer = async () => {
+    try {
+        await connectDB();
+        app.listen(PORT, () => {
+            console.log(`🚀 Server running on port ${PORT}`);
+        });
+    } catch (error) {
+        console.error('Failed to start server:', error);
+    }
+};
+
+startServer();
