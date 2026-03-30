@@ -30,6 +30,7 @@ const Signup = () => {
             // Redirect to verification code page (handles both new reg and resent code)
             setTimeout(() => navigate(`/verify-code?email=${encodeURIComponent(formData.email)}`), 2000);
         } catch (err) {
+            console.error('Signup Error:', err);
             setError(err.response?.data?.error || 'Registration failed. Please try again.');
         }
     };

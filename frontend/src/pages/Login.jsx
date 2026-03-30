@@ -17,6 +17,7 @@ const Login = () => {
             localStorage.setItem('user', JSON.stringify(response.data.user));
             navigate('/dashboard');
         } catch (err) {
+            console.error('Login Error:', err);
             if (!err.response) {
                 setError('Network error: Unable to connect to the server. Please ensure the backend is running.');
                 return;
