@@ -31,7 +31,12 @@ const Signup = () => {
             setTimeout(() => navigate(`/verify-code?email=${encodeURIComponent(formData.email)}`), 2000);
         } catch (err) {
             console.error('Signup Error:', err);
-            setError(err.response?.data?.error || 'Registration failed. Please try again.');
+            // Distinguish between network errors and API errors
+            if (!err.response) {
+                setError('Network error: The server might be waking up or slow. Please try again in 10-20 seconds.');
+            } else {
+                setError(err.response.data?.error || err.response.data?.message || 'Registration failed. Please try again.');
+            }
         }
     };
 

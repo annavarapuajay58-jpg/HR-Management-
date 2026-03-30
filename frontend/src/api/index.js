@@ -11,7 +11,7 @@ const isLocal = window.location.hostname === "localhost" || window.location.host
 // ✅ Axios instance
 const api = axios.create({
     baseURL: isLocal ? LOCAL_URL : PROD_URL,
-    timeout: 30000, // ⏳ wait 30 seconds (Render wake-up time)
+    timeout: 60000, // ⏳ wait 60 seconds (Render wake-up time can be long)
 });
 
 // ✅ Request interceptor (Token attach)
@@ -33,10 +33,15 @@ api.interceptors.response.use(
     (response) => response,
     (error) => {
         if (!error.response) {
-            console.error("🚨 Network Error: Backend might be sleeping or unreachable");
-            alert("Server waking up... Please wait 20 seconds and try again.");
+            console.error("🚨 Network Error: Backend might be sleeping or unreachable", error.message);
+            // Only alert once to avoid spamming the user
+            if (!window.hasAlertedNetworkError) {
+                alert("Server is waking up (Render Free Tier)... Please wait 30-60 seconds and try again.");
+                window.hasAlertedNetworkError = true;
+                setTimeout(() => { window.hasAlertedNetworkError = false; }, 30000); // Reset after 30s
+            }
         } else {
-            console.error("API Error:", error.response.data);
+            console.error("API Error Response:", error.response.status, error.response.data);
         }
 
         return Promise.reject(error);
