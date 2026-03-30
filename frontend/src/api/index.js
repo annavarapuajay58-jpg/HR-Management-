@@ -2,7 +2,11 @@ import axios from "axios";
 
 
 // ✅ Base URLs
+const LOCAL_URL = "http://localhost:5000/api";
 const PROD_URL = "https://hr-management-2-61ek.onrender.com/api";
+
+// ✅ Determine if running locally
+const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
 // ✅ Axios instance
 const api = axios.create({
