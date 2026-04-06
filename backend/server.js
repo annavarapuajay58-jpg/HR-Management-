@@ -23,21 +23,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
-// ✅ Middleware to check DB connection
-const checkDbConnection = (req, res, next) => {
-    if (mongoose.connection.readyState !== 1) {
-        return res.status(503).json({
-            error: "Database Connection Failed",
-            message: "MongoDB not connected"
-        });
-    }
-    next();
-};
-
-
-// ✅ CORS
+// ✅ CORS (better for production)
 app.use(cors({
-    origin: true,
+    origin: "*",
     credentials: true
 }));
 
@@ -48,8 +36,6 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // ================= ROUTES =================
-app.use('/api', checkDbConnection);
-
 app.use('/api/auth', authRoutes);
 app.use('/api/leaves', leaveRoutes);
 app.use('/api/team', teamRoutes);
@@ -77,17 +63,21 @@ app.get('/', (req, res) => {
 });
 
 
-// ================= START SERVER =================
+// ================= START SERVER (FIXED) =================
 const startServer = async () => {
     try {
-        await connectDB(); // try DB connect
-    } catch (err) {
-        console.log("DB connection failed, continuing...");
-    }
+        await connectDB(); // ✅ MUST connect first
 
-    app.listen(PORT, () => {
-        console.log(`🚀 Server running on port ${PORT}`);
-    });
+        console.log("✅ MongoDB Connected Successfully");
+
+        app.listen(PORT, () => {
+            console.log(`🚀 Server running on port ${PORT}`);
+        });
+
+    } catch (err) {
+        console.error("❌ MongoDB connection failed:", err.message);
+        process.exit(1); // 🔥 STOP SERVER if DB fails
+    }
 };
 
 startServer();
