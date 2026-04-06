@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 mongoose.set("bufferCommands", false);
 
 const connectionString =
-    process.env.MONGO_URI || // ✅ FIXED NAME (important)
+    process.env.MONGODB_URI || // ✅ FIXED NAME (important)
     "mongodb://127.0.0.1:27017/hamo_employees";
 
 const connectDB = async () => {
