@@ -11,7 +11,7 @@ const isLocal = window.location.hostname === "localhost" || window.location.host
 // ✅ Axios instance
 const api = axios.create({
     baseURL: isLocal ? LOCAL_URL : PROD_URL,
-    timeout: 60000, // ⏳ wait 60 seconds (Render wake-up time can be long)
+    timeout: 120000, // ⏳ wait 60 seconds (Render wake-up time can be long)
 });
 
 // ✅ Request interceptor (Token attach)
