@@ -17,8 +17,9 @@ const Login = () => {
             localStorage.setItem('user', JSON.stringify(response.data.user));
             navigate('/dashboard');
         } catch (err) {
+            console.error('Login Error:', err);
             if (!err.response) {
-                setError('Network error: Unable to connect to the server. Please ensure the backend is running.');
+                setError('Network error: The server might be waking up (Render Free Tier). Please wait 30-60 seconds and try again.');
                 return;
             }
             const data = err.response.data;
