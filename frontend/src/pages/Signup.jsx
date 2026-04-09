@@ -43,6 +43,9 @@ const Signup = () => {
     return (
         <div className="auth-container">
             <div className="auth-card" style={{ maxWidth: '450px' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+                    <img src="/logo.jpeg" alt="Logo" style={{ width: '110px', height: '110px', borderRadius: '50%', objectFit: 'cover' }} />
+                </div>
                 <h2 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Create Account</h2>
                 <form onSubmit={handleSubmit}>
                     {error && <div style={{ color: 'var(--danger)', marginBottom: '1rem', fontSize: '0.875rem' }}>{error}</div>}

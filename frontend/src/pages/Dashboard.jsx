@@ -96,8 +96,8 @@ const Dashboard = () => {
             {/* Sidebar */}
             <div className="sidebar">
                 <div style={{ marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <img src="/logo.jpeg" alt="Logo" style={{ width: '40px', height: '40px', borderRadius: '0.5rem', objectFit: 'contain', flexShrink: 0 }} />
-                    <h2 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'white' }}>Nova HamoTech</h2>
+                    <img src="/logo.jpeg" alt="Logo" style={{ width: '55px', height: '55px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+                    <h2 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'white', whiteSpace: 'nowrap' }}>Nova HamoTech</h2>
                 </div>
 
                 <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
