@@ -3,7 +3,7 @@ import axios from "axios";
 
 // ✅ Base URLs
 const LOCAL_URL = "http://localhost:5000/api";
-const PROD_URL = "https://hr-management-2-61ek.onrender.com/api";
+const PROD_URL = import.meta.env.VITE_API_URL || "https://hr-management-2-61ek.onrender.com/api";
 
 // ✅ Determine if running locally
 const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
@@ -11,7 +11,7 @@ const isLocal = window.location.hostname === "localhost" || window.location.host
 // ✅ Axios instance
 const api = axios.create({
     baseURL: isLocal ? LOCAL_URL : PROD_URL,
-    timeout: 120000, // ⏳ wait 60 seconds (Render wake-up time can be long)
+    timeout: 60000, // ⏳ wait 60 seconds (Render wake-up time can be long)
 });
 
 // ✅ Request interceptor (Token attach)
